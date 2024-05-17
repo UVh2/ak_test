@@ -76,7 +76,7 @@ def get_random_image():
     archetype_url = f'https://github.com/Aceship/Arknight-Images/blob/main/ui/subclass/sub_{character_subprofession}_icon.png?raw=true'
 
     # Render the HTML template with the image URL and character name
-    return render_template('image.html', image_url=image_url, character_name=character_name, character_class=character_profession, 
+    return render_template('index.html', image_url=image_url, character_name=character_name, character_class=character_profession, 
                            archetype_url=archetype_url, character_tags=character_tags, character_blockCnt=character_blockCnt,
                            character_skill_urls=character_skill_urls)
 

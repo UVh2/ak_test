@@ -4,7 +4,7 @@ import requests
 import json
 import random
 
-app = Flask('arknights_test')
+app = Flask('arknights_test', template_folder='.')
 
 def fetch_json_data():
     json_url = 'https://raw.githubusercontent.com/Aceship/AN-EN-Tags/master/json/gamedata/en_US/gamedata/excel/character_table.json'  # Replace with the URL of your JSON file

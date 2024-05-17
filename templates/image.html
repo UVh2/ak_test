@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AK Random Op Generator</title>
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+    <style>
+            .banner {
+                background-color: #a1a9ad;
+                color: black;
+                padding: 10px;
+                text-align: center;
+                width: 50%;
+                position: fixed;
+                right: 0;
+                bottom: 0;
+            }
+
+            .container {
+                position: fixed;
+                background-image: url('https://i.redd.it/g1fj0of234561.jpg');
+                background-size: cover;
+                background-position: left;
+                left: 0; 
+                top: 0;
+                height: 100%; 
+                width: 50%;
+                display: flex; 
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container img {
+                max-height: 95%; 
+                width: auto;
+                height: auto;
+                margin-top: auto;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                /* top: 50%; */
+                right: 0;
+                height: 100%;
+                width: 50%;
+                justify-content: center;
+                align-items: center;
+                /* transform: translateY(-50%); */
+            }
+
+            .content img {
+                background-color: black;
+                height: 10vh;
+                width: 10vh;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <button class="banner" onclick="getRandomImage()">
+            Get Random Operator
+        </button>
+        <img src="{{ archetype_url }}">
+        <h2> 
+            Operator: {{ character_name }} <br> Class: {{ character_class }} <br> Tags: {{ character_tags }} <br> Block Count: {{character_blockCnt}} <br> 
+        </h2>
+        <div>
+            {% for url in character_skill_urls %}
+            <img src="{{ url }}" alt="Random Character Image">
+            {% endfor %}
+        </div>
+    </div>
+    <div class="container">
+        <img src="{{ image_url }}" alt="Random Character Image">
+    </div>
+    <script>
+        function getRandomImage() {
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html>
+
